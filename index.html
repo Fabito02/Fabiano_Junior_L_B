@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One:wght@100;300;400;500;700;900&family=Rubik+Mono+One:wght@100;300;400;500;700;900&family=Varela+Round:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="source/style.css">
+    <title>Sobre Mim</title>
+</head>
+<body>
+    <div class="return"><i class="fa-solid fa-arrow-up" onclick="primeiraParte()"></i></div>
+    <div class="inicial" id="primeiraParte">
+        <header id="top">
+            <div class="blur">
+                <div class="ball1"></div>
+                <div class="ball2"></div>
+            </div>
+        </header>
+
+        <div class="me_container">
+            <img src="https://avatars.githubusercontent.com/u/138934847?v=4&size=64" class="avatar">
+        </div>
+        <div class="name">
+            <h1>Fabiano Júnior Lima Barbosa</h1>
+        </div>
+        <div class="contatos">
+            <i class="bi bi-github" onclick="window.open('https://github.com/Fabito02/', '_blank')" title="Github"></i>
+            <i class="bi bi-envelope-fill" onclick="window.open('mailto:fabianojuniorlimaba2@gmail.com', '_blank')" title="E-Mail"></i>
+            <i class="bi bi-telegram" onclick="window.open('https://t.me/BinnaryBard', '_blank')" title="Telegram"></i>
+        </div>    
+        <div class="categorias">
+            <h2 class="guia">CATEGORIAS</h2>
+            <div class="botoesGuia">
+                <button onclick="segundaParte()" class="botaoGuia">Sobre</button>
+                <button onclick="terceiraParte()" class="botaoGuia">Níveis de Habilidade</button>
+                <button onclick="quartaParte()" class="botaoGuia">Meus Projetos</button>
+            </div>
+        </div>
+    </div>
+    <div class="segundaParte" id="segundaParte">
+        <div class="boxes">
+            <div class="box">
+                <h2>Sobre Mim <i class="fas fa-user" style="font-size: 24px; transform: translateY(-2px);"></i></h2>
+                <p>Olá! Meu nome é Fabiano Júnior Lima Barbosa. Sou um jovem programador brasileiro, sempre disposto a aprender mais.
+                    <br><br> Sempre gostei da área de tecnologia. Desde os meus 12 anos, estava em contato com a programação através dos meus projetos com <a href="https://www.arduino.cc/en/about">Arduino.</a>
+                    <br><br> Atuo na área há 2 anos. Estou cursando o 2° ano do curso de Informática Integrada ao Ensino Médio no Instituto Federal do Norte de Minas Gerais, Campus Almenara.
+                    <br><br><span style="color: #76726b;">Eu uso Arch Linux :]</span>
+                </p>
+            </div>
+            <div class="box">
+                <h2>Minhas Habilidades <i class="fa-solid fa-briefcase" style="font-size: 24px; transform: translateY(-2px);"></i></h2>
+                <p>Habilidades em Design de Interfaces Web, Design Responsivo, UI/UX Design (Design de Interface e Experiência do Usuário) e Design de Navegação.
+                    <br><br> Possuo experiência com o uso do Firebase (Storage, Realtime Database e Autenticação).
+                    <br><br> Possuo bom nível de habilidade em programação com JavaScript.
+                </p>
+            </div>
+        </div>    
+    </div>
+        <div class="terceiraParte" id="terceiraParte">
+            <div class="h2Title">
+            <h2>Níveis de Habilidade <i class="bi bi-clipboard-data-fill"  style="margin-left: 10px;"></i></h2>
+        </div>
+        <div class="habilidades">
+
+            <h3 style="text-align: center;">JavaScript <i class="fa-brands fa-js"></i></h3>
+            <div class="habilidade-container">
+                <div class="barra" style="width: 72.73%; background-color: #d7ca65;"></div>
+                <span class="porcentagem">72.73%</span>
+            </div>
+
+            <h3 style="text-align: center;">HTML5 <i class="fa-brands fa-html5"></i></h3>
+            <div class="habilidade-container">
+                <div class="barra" style="width: 90.91%; background-color: #d76565;"></div>
+                <span class="porcentagem">90.91%</span>
+            </div>
+
+            <h3 style="text-align: center;">CSS3 <i class="fa-brands fa-css3"></i></h3>
+            <div class="habilidade-container">
+                <div class="barra" style="width: 91.67%; background-color: #65abd7;"></div>
+                <span class="porcentagem">91.67%</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="quartaParte" id="quartaParte">
+        <div class="box">
+            <h2>Artes de Gleiciane Lima <i class="fa-solid fa-palette" style="font-size: 24px; transform: translateY(-2px);"></i></h2>
+            <p>
+                Este site eu fiz em um projeto da matéria de POO (Programação Orientada a Objetos) em meu curso técnico, onde era necesssária a criação de um site para um cliente real. 
+                <br><br>Este site apresenta os trabalhos e carreira de minha cliente. Minha cliente, ao acessar com uma conta Admin, poderá realizar a postagem de Fotos ou Vídeos com uma descrição à sua galeria, onde os dados e os arquivos serão armazenados no Firebase Realtime Database e Firebase Storage respectivamente.
+                <br><br>O site conta com uma aba de encomendas, onde após seu cliente preencher e enviar o formulário, todos os dados do pedido serão enviados ao seu e-mail, com o auxílio da API EmailJS. 
+            </p>
+        </div>
+    </div>
+</body>
+<script src="source/script.js"></script> 
+</html>
