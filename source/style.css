@@ -19,7 +19,7 @@ a:visited {
 }
 
 ::selection {
-    background-color: #deebfe;
+    background-color: #fff3d3;
 }
 
 .name {
@@ -35,20 +35,24 @@ a:visited {
 
 .guia {
     margin-top: 8vh;
+    font-weight: 900;
     color: #20345c;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .botoesGuia {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .botaoGuia {
     margin: 5px;
     font-weight: 700;
-    font-family: "Varela Round", sans-serif;
+    font-family: "Nunito", sans-serif;
     cursor: pointer;
     font-weight: bold;
     padding: 8px 14px;
@@ -64,10 +68,13 @@ a:visited {
     background-color: #a59f93;
 }
 
+main {
+    transition: filter 0.2s;
+}
+
 .botaoGuia:active {
     transform: scale(0.9);
 }
-
 
 .avatar {
     border-style: solid;
@@ -83,6 +90,7 @@ p {
     text-align: justify;
     color: #2c2e31;
     font-weight: 600;
+    font-size: 16px;
 }
 
 @keyframes widthFrames {
@@ -101,8 +109,9 @@ p {
 }
 
 h2, h3, h4 {
+    font-weight: 900;
     letter-spacing: 3px;
-    font-family: "Lilita One", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 h2 {
@@ -115,7 +124,7 @@ h1 {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 30px;
-    color: #273557;
+    color: #1d2536;
     font-family: "Rubik Mono One", monospace;
     text-align: center;
 }
@@ -228,7 +237,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .terceiraParte {
@@ -236,7 +245,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .quartaParte {
@@ -261,7 +270,6 @@ header {
     margin: 20px;
     min-width: 250px;
     max-width: 550px;
-    max-height: 800px;
     border-style: solid;
     border-width: 4px;
     border-color: #bdb8ad;
@@ -274,7 +282,6 @@ header {
 }
 
 .box h2 {
-    font-weight: lighter;
     font-size: 26px;
 }
 
@@ -287,6 +294,8 @@ header {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 999;
+    box-shadow: 0 0 10px #0000004d;
 }
 
 .return i {
@@ -328,6 +337,73 @@ header {
 
 .terceiraParte h2 {
     font-size: 36px;
+}
+
+.box img {
+    cursor: pointer;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #687c88;
+    margin: 5px;
+    border-radius: 12px;
+    width: calc(50% - 16px);
+    transition: transform 0.07s ease-in-out;
+}
+
+.modal img {
+    cursor: pointer;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #687c88;
+    border-radius: 12px;
+    max-height: 80vh;
+    max-width: 80vw;
+    transition: transform 0.07s ease-in-out;
+}
+
+.box img:active {
+    transform: scale(0.9);
+}
+
+footer {
+    height: 80px;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    position: fixed;
+    background-color: #00000096;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.5s, display 0.5s;
+}
+
+.modal .close {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    position: fixed;
+    color: rgb(9, 103, 146);
+    transform: translateY(calc(-50vh + 30px)) translateX(calc(50vw - 40px));
+    transition: background-color 0.25s ease, transform 0.2s;
+}
+
+.modal .close:hover {
+    background-color: rgb(215, 215, 215);
+    color: rgb(12, 78, 109);
+}
+
+.modal .close:active {
+    transform: translateY(calc(-50vh + 30px)) translateX(calc(50vw - 40px)) scale(0.9);
 }
 
 @media (max-width: 720px) {
