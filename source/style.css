@@ -63,7 +63,7 @@ a:visited {
     color: #ffffff;
     background-color: #8a867d;
     transition: background-color 0.25s ease, transform 0.2s;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.123);
+    box-shadow: 0px 0px 8px #0000004d;
 }
 
 .botaoGuia:hover {
@@ -281,7 +281,7 @@ header {
     padding-left: 25px;
     padding-right: 25px;
     border-radius: 14px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px #0000004d;
 }
 
 .box h2 {
@@ -344,19 +344,16 @@ header {
 
 .box img {
     cursor: pointer;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #687c88;
     margin: 5px;
     border-radius: 12px;
     width: calc(50% - 16px);
     transition: transform 0.07s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px #0000004d;
 }
 
 .modal img {
     cursor: pointer;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
     border-color: #687c88;
     border-radius: 12px;
@@ -396,14 +393,14 @@ footer {
     width: 40px;
     font-size: 30px;
     position: fixed;
-    color: rgb(9, 103, 146);
+    color: rgb(50, 100, 123);
     transform: translateY(calc(-50vh + 30px)) translateX(calc(50vw - 40px));
     transition: background-color 0.25s ease, transform 0.2s;
 }
 
 .modal .close:hover {
     background-color: rgb(215, 215, 215);
-    color: rgb(12, 78, 109);
+    color: rgb(19, 64, 84);
 }
 
 .modal .close:active {
