@@ -11,6 +11,7 @@ function pular() {
     avatar.classList.add('pular');
     setTimeout(() => {
         avatar.classList.remove('pular');
+        window.open('https://github.com/Fabito02/', '_blank');
     }, 600);
 }
 
