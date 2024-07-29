@@ -1,3 +1,19 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const avatar = document.querySelector('.avatar');
+    avatar.classList.add('widthFrames');
+    setTimeout(() => {
+        avatar.classList.remove('widthFrames');
+    }, 800);
+});
+
+function pular() {
+    const avatar = document.querySelector('.avatar');
+    avatar.classList.add('pular');
+    setTimeout(() => {
+        avatar.classList.remove('pular');
+    }, 600);
+}
+
 function primeiraParte() {
     document.getElementById('primeiraParte').scrollIntoView({ behavior: 'smooth' });
 }
