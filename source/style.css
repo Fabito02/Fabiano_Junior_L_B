@@ -487,6 +487,12 @@ header {
     width: calc(50% - 16px);
     transition: transform 0.07s ease-in-out;
     box-shadow: 0px 4px 6px var(--cor-sombra);
+    transition: transform 0.25s, filter 0.25s;
+}
+
+.box img:hover {
+    transform: scale(1.05);
+    filter: brightness(60%) blur(1px);
 }
 
 .modal img {
