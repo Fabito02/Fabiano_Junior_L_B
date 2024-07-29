@@ -11,16 +11,17 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="source/style.css">
-    <title>Fabiano Júnior</title>
+    <title>Portifólio | Fabiano Júnior</title>
 </head>
-<body>
+<body theme='dark'>
     <div class="modal" id="modal" style="display: none;">
         <div class="close" onclick="closeModal()"><i class="fas fa-times"></i></div>
         <img src="" id="modalImg">
     </div>
     <div class="return"><i class="fa-solid fa-arrow-up" onclick="primeiraParte()"></i></div>
+    <div class="theme" id="theme" onclick="setTheme()"><i class="fa-solid fa-toggle-on"></i></div>
     <main>
-        <div class="inicial" id="primeiraParte">
+        <div class="inicial animar" id="primeiraParte">
             <header id="top">
                 <div class="blur">
                     <div class="ball1"></div>
@@ -47,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="segundaParte" id="segundaParte">
+        <div class="segundaParte animar" id="segundaParte">
             <div class="boxes">
                 <div class="box">
                     <h2>Sobre Mim <i class="fas fa-user" style="font-size: 24px; transform: translateY(-2px);"></i></h2>
@@ -66,7 +67,7 @@
                 </div>
             </div>    
         </div>
-            <div class="terceiraParte" id="terceiraParte">
+            <div class="terceiraParte animar" id="terceiraParte">
                 <div class="h2Title">
                 <h2>Níveis de Habilidade <i class="bi bi-clipboard-data-fill"  style="margin-left: 10px;"></i></h2>
             </div>
@@ -92,7 +93,7 @@
 
             </div>
         </div>
-        <div class="quartaParte" id="quartaParte">
+        <div class="quartaParte animar" id="quartaParte">
 
             <div class="box">
                 <h2>Artes de Gleiciane Lima <i class="fa-solid fa-palette" style="font-size: 24px; transform: translateY(-2px);"></i></h2>

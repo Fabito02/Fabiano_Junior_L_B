@@ -1,15 +1,93 @@
+/* Tema claro */
+[theme='light'] {
+    --cor-fundo: #ffffff;
+    --cor-link: #3a4ca0;
+    --cor-selecao: #fff3d3;
+    --cor-texto-guia: #20345c;
+    --cor-botao: #68655f;
+    --cor-botao-hover: #00000000;
+    --cor-botao-texto: #ffffff;
+    --cor-avatar-borda: #44749d;
+    --cor-p: #2c2e31;
+    --cor-titulo-h2: #36322b;
+    --cor-titulo-h1: #1d2536;
+    --cor-ball: #3e8acd;
+    --cor-contato-fundo: #c6d4e1;
+    --cor-contato-hover: #99b4cc;
+    --cor-return: #99b4cc;
+    --cor-box-fundo: #ebe7e0;
+    --cor-sombra: #0000004d;
+    --cor-habilidade-fundo: #e0e0e0;
+    --cor-modal-fundo: #00000096;
+    --cor-close-texto: rgb(50, 100, 123);
+    --cor-close-fundo-hover: rgb(215, 215, 215);
+    --cor-close-fundo: rgb(255, 255, 255);
+    --cor-close-texto-hover: rgb(19, 64, 84);
+    --cor-imagem-modal-borda: #687c88;
+    --cor-i: #000000;
+}
+
+/* Tema escuro */
+[theme='dark'] {
+    --cor-fundo: #121212;
+    --cor-link: #8ab4f8;
+    --cor-selecao: #3e3e3e;
+    --cor-texto-guia: #e0e0e0;
+    --cor-botao: #605a56;
+    --cor-botao-hover: #ffffff00;
+    --cor-botao-texto: #ffffff;
+    --cor-avatar-borda: #253654;
+    --cor-p: #e0e0e0;
+    --cor-titulo-h2: #d1d1d1;
+    --cor-titulo-h1: #ffffff;
+    --cor-ball: #3e8acd;
+    --cor-contato-fundo: #1c1f30;
+    --cor-contato-hover: #282a3e;
+    --cor-return: #282a3e;
+    --cor-box-fundo: #1e1e1e;
+    --cor-sombra: #00000080;
+    --cor-habilidade-fundo: #2a2a2a;
+    --cor-modal-fundo: #000000cc;
+    --cor-close-texto: #b0b0b0;
+    --cor-close-fundo-hover: #4c4c4c;
+    --cor-close-fundo: #2e2e2e;
+    --cor-close-texto-hover: #d8d8d8;
+    --cor-imagem-modal-borda: #3f4a53;
+    --cor-i: #e0e0e0;
+}
+
 body {
     font-family: "Varela Round", sans-serif;
     margin: 0;
-    background-color: #ffffff;
+    background-color: var(--cor-fundo);
+    transition: background-color 0.2s;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem vertical */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 12px; /* Arredondamento do polegar */
+    border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
 
 a:link {
-    color: #3a4ca0;
+    color: var(--cor-link);
 }
 
 a:visited {
-    color: #3a4ca0;
+    color: var(--cor-link);
 }
 
 .inicial {
@@ -17,7 +95,7 @@ a:visited {
 }
 
 ::selection {
-    background-color: #fff3d3;
+    background-color: var(--cor-selecao);
 }
 
 .name {
@@ -34,7 +112,7 @@ a:visited {
 .guia {
     margin-top: 70px;
     font-weight: 900;
-    color: #20345c;
+    color: var(--cor-texto-guia);
     font-size: 30px;
 }
 
@@ -48,14 +126,24 @@ a:visited {
     margin-right: 30px;
 }
 
+.animar {
+    opacity: 0;
+    transform: translateX(-40vw);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animar.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .botaoGuia {
     margin: 5px;
     font-weight: 700;
     font-family: "Nunito", sans-serif;
     cursor: pointer;
-    border-color: #68655f;
-    background-color: #68655f;
-    color: #ffffff;
+    border-color: var(--cor-botao);
+    background-color: var(--cor-botao);
+    color: var(--cor-botao-texto);
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 8px;
@@ -66,8 +154,8 @@ a:visited {
 }
 
 .botaoGuia:hover {
-    color: #68655f;
-    background-color: #00000000;
+    color: var(--cor-botao);
+    background-color: var(--cor-botao-hover);
 }
 
 .categorias {
@@ -90,7 +178,7 @@ main {
     cursor: pointer;
     border-style: solid;
     border-width: 4px;
-    border-color: #44749d;
+    border-color: var(--cor-avatar-borda);
     width: 130px;
     border-radius: 50%;
     position: absolute;
@@ -115,7 +203,7 @@ main {
 
 p {
     text-align: justify;
-    color: #2c2e31;
+    color: var(--cor-p);
     font-size: 16px;
 }
 
@@ -141,16 +229,20 @@ h2, h3, h4 {
 }
 
 h2 {
-    color: #362d18;
+    color: var(--cor-titulo-h2);
     text-align: center;
     font-size: 16px;
+}
+
+h3 {
+    color: var(--cor-i);
 }
 
 h1 {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 30px;
-    color: #1d2536;
+    color: var(--cor-titulo-h1);
     font-family: "Rubik Mono One", monospace;
     text-align: center;
 }
@@ -165,7 +257,7 @@ header {
     position: absolute;
     width: 80px;
     height: 50px;
-    background-color: #44749d;
+    background-color: var(--cor-ball);
     border-radius: 50%;
     animation: moveBall1 12s ease-in-out infinite, opacityFrames 10s;
 }
@@ -174,7 +266,7 @@ header {
     opacity: 100%;
     width: 80px;
     height: 50px;
-    background-color: #44749d;
+    background-color: var(--cor-ball);
     border-radius: 50%;
     animation: moveBall2 12s ease-in-out infinite, opacityFrames 10s;
 }
@@ -185,7 +277,7 @@ header {
     justify-content: center;
 }
 
-.contatos i, .return i {
+.contatos i, .return i , .theme i {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,15 +288,16 @@ header {
     font-size: 20px;
     border-radius: 50%;
     padding: 8px;
-    background-color: #c6d4e1;
+    color: var(--cor-i);
+    background-color: var(--cor-contato-fundo);
     transition: background-color 0.25s ease, transform 0.2s;
 }
 
-.contatos i:hover, .return i:hover {
-    background-color: #99b4cc;
+.contatos i:hover, .return i:hover, .theme i:hover {
+    background-color: var(--cor-contato-hover);
 }
 
-.contatos i:active, .return i:active {
+.contatos i:active, .return i:active, .theme i:active {
     transform: scale(0.9);
 }
 
@@ -297,13 +390,14 @@ header {
     margin: 20px;
     min-width: 250px;
     max-width: 550px;
-    background-color: #ebe7e0;
+    background-color: var(--cor-box-fundo);
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 25px;
     padding-right: 25px;
     border-radius: 14px;
-    box-shadow: 0px 4px 10px #0000004d;
+    box-shadow: 0px 4px 10px var(--cor-sombra);
+    transition: background-color 0.2s;
 }
 
 .box h2 {
@@ -315,12 +409,25 @@ header {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: #99b4cc;
+    background-color: var(--cor-return);
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 999;
-    box-shadow: 0 0 10px #0000004d;
+    box-shadow: 0 0 10px var(--cor-sombra);
+}
+.theme {
+    transform: translateY(-60px);
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--cor-return);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    box-shadow: 0 0 10px var(--cor-sombra);
 }
 
 .return i {
@@ -328,17 +435,17 @@ header {
 }
 
 .habilidades {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .habilidade-container {
     width: 250px;
     height: 30px;
-    background-color: #e0e0e0;
+    background-color: var(--cor-habilidade-fundo);
     border-radius: 30px; 
     position: relative;
     margin-bottom: 60px;
-    
+    transition: background-color 0.2s;
 }
 
 .barra {
@@ -370,13 +477,13 @@ header {
     border-radius: 12px;
     width: calc(50% - 16px);
     transition: transform 0.07s ease-in-out;
-    box-shadow: 0px 4px 6px #0000004d;
+    box-shadow: 0px 4px 6px var(--cor-sombra);
 }
 
 .modal img {
     border-width: 3px;
     border-style: solid;
-    border-color: #687c88;
+    border-color: var(--cor-imagem-modal-borda);
     border-radius: 12px;
     max-height: 80vh;
     max-width: 80vw;
@@ -397,7 +504,7 @@ footer {
     justify-content: center;
     z-index: 1000;
     position: fixed;
-    background-color: #00000096;
+    background-color: var(--cor-modal-fundo);
     height: 100vh;
     width: 100vw;
     transition: opacity 0.5s, display 0.5s;
@@ -409,19 +516,19 @@ footer {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--cor-close-fundo);
     height: 35px;
     width: 35px;
     font-size: 28px;
     position: fixed;
-    color: rgb(50, 100, 123);
+    color: var(--cor-close-texto);
     transform: translateY(calc(-50vh + 30px)) translateX(calc(50vw - 40px));
     transition: background-color 0.25s ease, transform 0.2s;
 }
 
 .modal .close:hover {
-    background-color: rgb(215, 215, 215);
-    color: rgb(19, 64, 84);
+    background-color: var(--cor-close-fundo-hover);
+    color: var(--cor-close-texto-hover);
 }
 
 .modal .close:active {

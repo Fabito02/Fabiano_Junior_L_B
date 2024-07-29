@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const animar = document.querySelectorAll('.animar');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    animar.forEach(element => {
+        observer.observe(element); // Observa cada elemento individualmente
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const avatar = document.querySelector('.avatar');
     avatar.classList.add('widthFrames');
@@ -52,4 +72,16 @@ window.onclick = function(event) {
     }
 }
 
+function setTheme() {
+    let body = document.querySelector('body');
+    let currentTheme = body.getAttribute('theme');
+    let themeButton = document.getElementById("theme")
 
+    if (currentTheme === "dark") {
+        body.setAttribute('theme', 'light');
+        themeButton.innerHTML = '<i class="fa-solid fa-toggle-off"></i>'
+    } else {
+        body.setAttribute('theme', 'dark');
+        themeButton.innerHTML = '<i class="fa-solid fa-toggle-on"></i>'
+    }
+}
