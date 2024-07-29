@@ -2,9 +2,9 @@
 [theme='light'] {
     --cor-fundo: #ffffff;
     --cor-link: #3a4ca0;
-    --cor-selecao: #fff3d3;
+    --cor-selecao: #d0cbc1;
     --cor-texto-guia: #20345c;
-    --cor-botao: #68655f;
+    --cor-botao: #817b6f;
     --cor-botao-hover: #00000000;
     --cor-botao-texto: #ffffff;
     --cor-avatar-borda: #44749d;
@@ -30,17 +30,17 @@
 /* Tema escuro */
 [theme='dark'] {
     --cor-fundo: #121212;
-    --cor-link: #8ab4f8;
+    --cor-link: #8a97f8;
     --cor-selecao: #3e3e3e;
     --cor-texto-guia: #e0e0e0;
-    --cor-botao: #605a56;
+    --cor-botao: #585451;
     --cor-botao-hover: #ffffff00;
     --cor-botao-texto: #ffffff;
     --cor-avatar-borda: #253654;
     --cor-p: #e0e0e0;
     --cor-titulo-h2: #d1d1d1;
     --cor-titulo-h1: #ffffff;
-    --cor-ball: #3e8acd;
+    --cor-ball: #3e40cd;
     --cor-contato-fundo: #1c1f30;
     --cor-contato-hover: #282a3e;
     --cor-return: #282a3e;
@@ -91,7 +91,22 @@ a:visited {
 }
 
 .inicial {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.inicial header, .inicial .name, .inicial .contatos, .inicial .categorias {
+    animation: iniciar 1s forwards;
+}
+
+@keyframes iniciar {
+    0% {
+        opacity: 0;
+        transform: translateY(10vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 ::selection {
@@ -150,7 +165,7 @@ a:visited {
     font-size: 15px;
     border-width: 3px;
     border-style: solid;
-    transition: background-color 0.25s ease, transform 0.2s, color 0.25s;
+    transition: background-color 0.25s ease, transform 0.2s, color 0.25s, border-color 0.25s;
 }
 
 .botaoGuia:hover {
@@ -252,22 +267,21 @@ header {
     height: 100px;
 }
 
-.ball1 {
+.ball1, .ball2 {
     opacity: 100%;
     position: absolute;
     width: 80px;
     height: 50px;
     background-color: var(--cor-ball);
     border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.ball1 {
     animation: moveBall1 12s ease-in-out infinite, opacityFrames 10s;
 }
 
 .ball2 {
-    opacity: 100%;
-    width: 80px;
-    height: 50px;
-    background-color: var(--cor-ball);
-    border-radius: 50%;
     animation: moveBall2 12s ease-in-out infinite, opacityFrames 10s;
 }
 
@@ -298,7 +312,7 @@ header {
 }
 
 .contatos i:active, .return i:active, .theme i:active {
-    transform: scale(0.9);
+    transform: scale(0.8);
 }
 
 .blur {

@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const animar = document.querySelectorAll('.animar');
+    const desiredPixels = 135;
+
+    // Calcula a porcentagem de threshold baseado na altura da viewport
+    const thresholdPercentage = (desiredPixels / window.innerHeight);
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -10,13 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }, {
-        threshold: 0.3
+        threshold: thresholdPercentage
     });
 
     animar.forEach(element => {
-        observer.observe(element); // Observa cada elemento individualmente
+        observer.observe(element);
     });
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const avatar = document.querySelector('.avatar');
