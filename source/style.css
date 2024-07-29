@@ -64,12 +64,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #939292;
-    border-radius: 12px;
+    border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
