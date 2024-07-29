@@ -191,7 +191,7 @@ main {
     width: 130px;
     border-radius: 50%;
     position: absolute;
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out, border-color 0.2s;
 }
 
 .avatar.pular {
