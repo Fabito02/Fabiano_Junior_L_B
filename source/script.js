@@ -90,3 +90,15 @@ function setTheme() {
         themeButton.innerHTML = '<i class="fa-solid fa-toggle-on"></i>'
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    let body = document.querySelector('body');
+    let themeButton = document.getElementById("theme")
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        body.setAttribute('theme', 'dark');
+        themeButton.innerHTML = '<i class="fa-solid fa-toggle-on"></i>'
+    } else {
+        body.setAttribute('theme', 'light');
+        themeButton.innerHTML = '<i class="fa-solid fa-toggle-off"></i>'
+    }
+});
