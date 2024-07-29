@@ -57,10 +57,10 @@ a:visited {
     background-color: #68655f;
     color: #ffffff;
     font-weight: bold;
-    padding: 4px 10px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
     font-size: 15px;
-    border-width: 4px;
+    border-width: 3px;
     border-style: solid;
     transition: background-color 0.25s ease, transform 0.2s, color 0.25s;
 }
