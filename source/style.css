@@ -29,7 +29,7 @@
 
 /* Tema escuro */
 [theme='dark'] {
-    --cor-fundo: #121212;
+    --cor-fundo: #0f0f0f;
     --cor-link: #8a97f8;
     --cor-selecao: #3e3e3e;
     --cor-texto-guia: #e0e0e0;
@@ -64,22 +64,16 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem vertical */
-}
-
-::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 12px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 12px; /* Arredondamento do polegar */
-    border: 3px solid #f1f1f1;
+    background-color: #939292;
+    border-radius: 12px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: #727272;
 }
 
 a:link {
@@ -510,6 +504,9 @@ header {
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 80px;
 }
 
