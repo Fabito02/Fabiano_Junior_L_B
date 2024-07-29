@@ -507,7 +507,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 10px;
+    margin: 40px;
 }
 
 .modal {
