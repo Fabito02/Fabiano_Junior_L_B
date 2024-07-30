@@ -77,28 +77,34 @@ window.onclick = function(event) {
     }
 }
 
-function setTheme() {
+function setTheme(isSystemChange = false) {
     let body = document.querySelector('body');
     let currentTheme = body.getAttribute('theme');
-    let themeButton = document.getElementById("theme")
+    let themeButton = document.getElementById("theme").querySelector('i');
 
-    if (currentTheme === "dark") {
-        body.setAttribute('theme', 'light');
-        themeButton.innerHTML = '<i class="fa-solid fa-toggle-off"></i>'
+    if (isSystemChange) {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.setAttribute('theme', 'dark');
+            themeButton.className = 'fa-solid fa-toggle-on';
+        } else {
+            body.setAttribute('theme', '');
+            themeButton.className = 'fa-solid fa-toggle-off';
+        }
     } else {
-        body.setAttribute('theme', 'dark');
-        themeButton.innerHTML = '<i class="fa-solid fa-toggle-on"></i>'
+        if (currentTheme === "dark") {
+            body.setAttribute('theme', '');
+            themeButton.className = 'fa-solid fa-toggle-off';
+        } else {
+            body.setAttribute('theme', 'dark');
+            themeButton.className = 'fa-solid fa-toggle-on';
+        }
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    let body = document.querySelector('body');
-    let themeButton = document.getElementById("theme")
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        body.setAttribute('theme', 'dark');
-        themeButton.innerHTML = '<i class="fa-solid fa-toggle-on"></i>'
-    } else {
-        body.setAttribute('theme', 'light');
-        themeButton.innerHTML = '<i class="fa-solid fa-toggle-off"></i>'
-    }
+    setTheme(true);
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+        setTheme(true);
+    });
 });

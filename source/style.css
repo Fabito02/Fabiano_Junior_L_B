@@ -1,5 +1,5 @@
 /* Tema claro */
-[theme='light'] {
+:root {
     --cor-fundo: #ffffff;
     --cor-link: #3a4ca0;
     --cor-selecao: #d0cbc1;
