@@ -86,6 +86,7 @@ a:visited {
 
 .inicial {
     min-height: 100vh;
+    min-width: 100%;
 }
 
 .inicial header, .inicial .name, .inicial .contatos, .inicial .categorias {
@@ -366,6 +367,7 @@ header {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    min-width: 100%;
 }
 
 .terceiraParte {
@@ -374,14 +376,16 @@ header {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    min-width: 100%;
 }
 
 .quartaParte {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     flex-wrap: wrap;
+    min-height: 100vh;
+    min-width: 100%;
 }
 
 .h2Title {
