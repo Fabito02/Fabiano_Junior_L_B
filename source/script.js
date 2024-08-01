@@ -77,6 +77,17 @@ window.onclick = function(event) {
     }
 }
 
+function handleScroll() {
+    const returnTop = document.getElementById('return');
+    if (window.scrollY > 0) {
+        returnTop.style.transform = 'translateY(-60px)';
+    } else {
+        returnTop.style.transform = 'translateY(80px)';
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
+
 function setTheme(isSystemChange = false) {
     let body = document.querySelector('body');
     let currentTheme = body.getAttribute('theme');
