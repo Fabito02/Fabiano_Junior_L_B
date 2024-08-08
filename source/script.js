@@ -63,7 +63,7 @@ var corpo = document.querySelector('main')
 function openModal(image) {
     modalImg.src = image.src
     modal.style.display = 'flex'
-    corpo.style.filter = 'blur(7px)'
+    corpo.style.filter = 'blur(10px)'
 }
 
 function closeModal() {

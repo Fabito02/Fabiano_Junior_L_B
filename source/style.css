@@ -25,6 +25,7 @@
     --cor-close-texto-hover: rgb(19, 64, 84);
     --cor-imagem-modal-borda: #687c88;
     --cor-i: #000000;
+    --color-footer: #dfdfdf;
 }
 
 /* Tema escuro */
@@ -54,6 +55,7 @@
     --cor-close-texto-hover: #d8d8d8;
     --cor-imagem-modal-borda: #3f4a53;
     --cor-i: #e0e0e0;
+    --color-footer: #181818;
 }
 
 body {
@@ -173,7 +175,7 @@ a:visited {
 }
 
 main {
-    transition: filter 0.2s;
+    transition: filter 0.3s;
 }
 
 .botaoGuia:active {
@@ -515,10 +517,15 @@ header {
 }
 
 footer {
+    background-color: var(--color-footer);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10px;
+    height: 80px;   
+    transition: background-color 0.2s;
+}
+
+footer p {
     margin: 40px;
 }
 
@@ -531,7 +538,7 @@ footer {
     background-color: var(--cor-modal-fundo);
     height: 100vh;
     width: 100vw;
-    transition: opacity 0.5s, display 0.5s;
+    transition: opacity 0.5s, display 0.5s, filter 0.2s;
 }
 
 .modal .close {
