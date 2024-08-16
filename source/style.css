@@ -367,7 +367,7 @@ header {
 .segundaParte {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     min-height: 100vh;
     min-width: 100%;
 }
@@ -401,11 +401,10 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 15px;
 }
 
 .box {
-    margin-bottom: 80px;
+    margin: 20px;
     width: 100%;
     max-width: 550px;
     background-color: var(--cor-box-fundo);
