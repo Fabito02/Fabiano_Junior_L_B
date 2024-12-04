@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik+Mono+One:wght@100;300;400;500;700;900&family=Varela+Round:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 /* Tema claro */
 :root {
     --cor-fundo: #ffffff;
@@ -15,9 +20,8 @@
     --cor-contato-fundo: #c6d4e1;
     --cor-contato-hover: #99b4cc;
     --cor-return: #99b4cc;
-    --cor-box-fundo: #ebe7e0;
+    --cor-box-fundo: #dfdfdf;
     --cor-sombra: #0000004d;
-    --cor-habilidade-fundo: #e0e0e0;
     --cor-modal-fundo: #00000096;
     --cor-close-texto: rgb(50, 100, 123);
     --cor-close-fundo-hover: rgb(215, 215, 215);
@@ -30,7 +34,7 @@
 
 /* Tema escuro */
 [theme='dark'] {
-    --cor-fundo: #0f0f0f;
+    --cor-fundo: #000000;
     --cor-link: #8a97f8;
     --cor-selecao: #3e3e3e;
     --cor-texto-guia: #e0e0e0;
@@ -45,9 +49,8 @@
     --cor-contato-fundo: #1c1f30;
     --cor-contato-hover: #282a3e;
     --cor-return: #282a3e;
-    --cor-box-fundo: #1e1e1e;
+    --cor-box-fundo: #212121;
     --cor-sombra: #00000080;
-    --cor-habilidade-fundo: #2a2a2a;
     --cor-modal-fundo: #000000cc;
     --cor-close-texto: #b0b0b0;
     --cor-close-fundo-hover: #4c4c4c;
@@ -59,7 +62,7 @@
 }
 
 body {
-    font-family: "Varela Round", sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     background-color: var(--cor-fundo);
     transition: background-color 0.2s;
@@ -140,12 +143,12 @@ a:visited {
 
 .animar {
     opacity: 0;
-    transform: translateX(-15vw);
+    transform: translateY(5vw);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 .animar.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .botaoGuia {
@@ -372,7 +375,8 @@ header {
     flex-wrap: wrap;
 }
 
-.terceiraParte {
+.terceiraParte {
+
     flex-direction: column;
 }
 
@@ -434,39 +438,6 @@ header {
 
 .return i {
     font-size: 24px;
-}
-
-.habilidades {
-    margin-top: 60px;
-}
-
-.habilidade-container {
-    width: 250px;
-    height: 30px;
-    background-color: var(--cor-habilidade-fundo);
-    border-radius: 30px; 
-    position: relative;
-    margin-bottom: 60px;
-    transition: background-color 0.2s;
-}
-
-.barra {
-    height: 100%;
-    border-radius: 30px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70%;
-    transition: width 9s ease;
-}
-
-.porcentagem {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #000; /* Cor do texto */
-    font-weight: bold;
 }
 
 .terceiraParte h2 {
@@ -550,6 +521,26 @@ footer p {
 
 .modal .close:active {
     transform: translateY(calc(-50vh + 30px)) translateX(calc(50vw - 40px)) scale(0.9);
+}
+
+.habilidades {
+    margin: 40px;
+    margin-top: 60px;
+    max-width: 1000px;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.habilidades img {
+    height: 40px;
+    border-radius: 8px;
+    margin: 10px;
+    transition: transform 0.25s ease-out;
+}
+
+.habilidades img:hover {
+    transform: scale(1.08);
 }
 
 @media (max-width: 720px) {

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const animar = document.querySelectorAll('.animar');
-    const desiredPixels = 135;
+    const desiredPixels = 100;
 
     // Calcula a porcentagem de threshold baseado na altura da viewport
     const thresholdPercentage = (desiredPixels / window.innerHeight);
